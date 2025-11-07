@@ -1,0 +1,332 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    background-image: url("./Images/PortfolioWallpaper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 15px;
+    z-index: 1000;
+    backdrop-filter: blur(8px) url(#glass-distortion);
+    -webkit-backdrop-filter: blur(8px) url(#glass-distortion);
+}
+
+.nav-item {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+}
+
+.nav-item:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+}
+
+.nav-item:nth-child(1) {
+    filter: hue-rotate(270deg);
+}
+
+.nav-item:nth-child(2) {
+    filter: hue-rotate(110deg);
+}
+
+.nav-item:nth-child(3) {
+    filter: hue-rotate(180deg);
+}
+
+.nav-item span {
+    position: absolute;
+    display: block;
+}
+
+.nav-item span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear
+    infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+.nav-item span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate2 1s linear
+    infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    50%, 100% {
+        top: 100%;
+    }
+}
+
+.nav-item span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear
+    infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+
+    50%, 100% {
+        right: 100%;
+    }
+}
+
+.nav-item span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear
+    infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%, 100% {
+        bottom: 100%;
+    }
+}
+
+.section {
+    padding-top: 180px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.section h2 {
+    color: #03e9f4;
+    text-shadow: 0 0 5px #03e9f4;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 2.5em;
+}
+
+.social-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: auto;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.about-text {
+    max-width: 800px;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    font-size: 1.1em;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+}
+
+.project-back {
+    filter: blur(0.5rem);
+}
+
+.project-card {
+    width: 350px;
+    
+    background-color: rgba(17, 17, 17, 0.2);
+    backdrop-filter: blur(8px) url(#glass-distortion);
+    -webkit-backdrop-filter: blur(8px) url(#glass-distortion);
+
+    border: 1px solid #03e9f4;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(3, 233, 244, 0.5);
+    transition: transform 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(3, 233, 244, 0.8),
+                0 0 40px #03e9f4;
+}
+
+.project-card h3 {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #aaa;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #aaa;
+}
+
+.icon {
+    position: relative;
+    padding: 15px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px) url(#glass-distortion);
+    -webkit-backdrop-filter: blur(8px) url(#glass-distortion);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1), 
+    0 5px 15px rgba(0,0,0,0.2), 
+    0 0 25px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.icon i {
+    font-size: 24px;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.label {
+    margin-left: 10px;
+    color: #fff;
+    opacity: 0;
+    font-weight: 700;
+    transition: all 0.5s ease;
+}
+
+.icon:hover {
+    transform: scale(0.9);
+    width: 135px;
+}
+
+.icon:hover i {
+    color: #fff;
+}
+
+.icon:hover .label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.discord i{
+    margin-left: -5px;
+}
+
+.discord:hover {
+    background-color: #553eff;
+    box-shadow: 0 0 15px #553eff,
+    0 0 30px #553eff;
+}
+
+.instagram:hover {
+    background-color: #e4405f;
+    box-shadow: 0 0 15px #e4405f,
+    0 0 30px #e4405f;
+}
+
+.linkedin:hover {
+    background-color: #1da1f2;
+    box-shadow: 0 0 15px #1da1f2,
+    0 0 30px #1da1f2;
+}
+
+.gitlab:hover {
+    background-color: #e96a0f;
+    box-shadow: 0 0 15px #e96a0f,
+    0 0 30px #1da1f2;
+}
+
+footer {
+    color: #fff;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px) url(#glass-distortion);
+    -webkit-backdrop-filter: blur(8px) url(#glass-distortion);
+}
