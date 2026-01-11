@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Projet | Maxence</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="project-page">
+    <nav>
+        <div class="nav-container">
+            <a href="indexFR.html" class="logo">← Retour au portfolio</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="project-header">
+            <div class="title-wrapper">
+                <h1 id="titre-projet">Chargement...</h1>
+                <span id="badge-statut" class="status-badge"></span> </div>
+            <div id="tech-tags" class="tech-list"></div>
+        </header>
+
+        <hr class="separator">
+
+        <div class="project-details-grid">
+            <div class="details-main">
+                <section>
+                    <h3><i class="fas fa-info-circle"></i> Présentation</h3>
+                    <p id="description-projet"></p>
+                </section>
+
+                <section>
+                    <h3><i class="fas fa-tasks"></i> Fonctionnalités clés</h3>
+                    <ul id="liste-fonctions" class="custom-list"></ul>
+                </section>
+
+                <section>
+                    <h3><i class="fas fa-exclamation-triangle"></i> Défis techniques</h3>
+                    <p id="defis-projet"></p>
+                </section>
+            </div>
+
+            <aside class="details-side">
+                <div class="side-card">
+                    <h4>Informations</h4>
+                    <p><strong>Rôle :</strong> Développeur Solo</p>
+                    <p><strong>Statut :</strong> <span id="statut-projet"></span></p>
+                    <p><strong>Date :</strong> 2025 - 2026</p>
+                    <a href="#" id="link-github" class="btn-primary" target="_blank">
+                        <i class="fab fa-github"></i> Code Source
+                    </a>
+                </div>
+            </aside>
+        </div>
+
+        <div class="project-media">
+            <div class="carousel-container">
+                <div id="carousel-slides" class="carousel-slides">
+                    </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

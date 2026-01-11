@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxence Lawniczak | Développeur Full Stack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="nav-container">
+            <a href="#accueil" class="logo">ML</a>
+            <div class="nav-links">
+                <a href="#accueil">Accueil</a>
+                <a href="#apropos">À propos</a>
+                <a href="#projets">Projets</a>
+                <a href="#contact">Contact</a>
+                <a href="indexEN.html" id="lang-btn" class="lang-switch">EN</a>
+            </div>
+
+            <div class="hero-btns">
+                <a href="CV/CV Maxence Lawniczak.pdf" target="_blank" class="btn-secondary">
+                    <i class="fas fa-eye"></i> Voir CV
+                </a>
+                <a href="CV\CV Maxence Lawniczak.pdf" download class="btn-secondary">
+                    <i class="fas fa-download"></i> CV
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <header id="accueil" class="hero">
+        <div class="container hero-flex">
+            
+            <div class="hero-image">
+                <img src="Images\MaxenceLawniczak.png" alt="Maxence Lawniczak" class="profile-pic">
+            </div>
+
+            <div class="hero-text">
+                <h1>Maxence Lawniczak</h1>
+                <p>Étudiant en développement • 2ème année</p>
+                <div class="hero-btns">
+                    <a href="#projets" class="btn-primary">Voir les projets</a>
+                    <a href="mailto:lawnmax38@gmail.com" class="btn-secondary">Contact</a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <section id="apropos" class="container">
+            <div class="section-header">
+                <h2>À Propos</h2>
+                <div class="line"></div>
+            </div>
+            <p class="about-text">Basé sur une approche minimaliste, mon travail consiste à transformer des idées complexes en solutions techniques robustes. Actuellement en plein cursus de développement, je cultive une curiosité constante pour les nouvelles technologies et le design épuré.</p>
+        </section>
+
+        <section id="tech" class="container">
+            <div class="section-header">
+                <h2>Compétences</h2>
+                <div class="line"></div>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="card-inner">
+                        <div class="card-front"><i class="fab fa-java"></i><span>Java</span></div>
+                        <div class="card-back"><p>POO avancée et interfaces Swing.</p></div>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="card-inner">
+                        <div class="card-front"><i class="fas fa-microchip"></i><span>Langage C</span></div>
+                        <div class="card-back"><p>Gestion mémoire et bas niveau.</p></div>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="card-inner">
+                        <div class="card-front"><i class="fab fa-python"></i><span>Python</span></div>
+                        <div class="card-back"><p>Scripting et algorithmique.</p></div>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="card-inner">
+                        <div class="card-front"><i class="fas fa-database"></i><span>SQL</span></div>
+                        <div class="card-back"><p>Modélisation et requêtes BD.</p></div>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="card-inner">
+                        <div class="card-front"><i class="fab fa-html5"></i><span>Web</span></div>
+                        <div class="card-back"><p>Web-Design HTML/CSS/JS.</p></div>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="card-inner">
+                        <div class="card-front"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                        <div class="card-back"><p>Versionning et travail d'équipe.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projets" class="container">
+            <div class="section-header">
+                <h2>Projets</h2>
+                <div class="line"></div>
+            </div>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-gamepad"></i>
+                            <h3>Moteur 2D Java</h3>
+                            <small>Java Swing • Game Engine</small>
+                        </div>
+                        <div class="card-back">
+                            <p>Développement d'un moteur type Zelda : gestion des sprites, système de collisions et animations de personnages, logique de jeu, etc.</p>
+                            <a href="projet.html?id=moteur2d" class="project-link">Consulter →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-code"></i>
+                            <h3>Portfolio</h3>
+                            <small>HTML • CSS • Design</small>
+                        </div>
+                        <div class="card-back">
+                            <p>Création de cet univers sombre et minimaliste, optimisé pour la lisibilité et l'expérience utilisateur.</p>
+                            <a href="projet.html?id=portfolio" class="project-link">Consulter →</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <h2>Un projet en tête ?</h2>
+            <p>Envoyez-moi un mail à : <strong>lawnmax38@gmail.com</strong></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/maxence-lawniczak-010961386/"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/lawniczakmaxence/"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Maxence Lawniczak • Fait avec passion</p>
+        </div>
+    </footer>
+
+</body>
+</html>
