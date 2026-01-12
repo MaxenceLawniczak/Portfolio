@@ -26,64 +26,98 @@ const uiTranslations = {
 const projets = {
     'moteur2d': {
         fr: {
-            titre: "Moteur de jeu 2D",
+            titre: "Moteur de jeu 2D (Top-Down)",
             equipe: "Développeur Solo",
-            description: "Conception intégrale d'un moteur de rendu 2D inspiré des jeux d'aventure classiques.",
-            fonctions: ["Boucle de jeu 60 FPS", "Tilemapping", "Collisions AABB"],
-            defis: "Optimiser le rendu via le double buffering.",
+            description: "Développement d'un moteur de jeu 2D en Java utilisant un système de chargement de données externe. Le moteur génère dynamiquement l'environnement à partir de fichiers texte, permettant une création de niveaux flexible et structurée.",
+            fonctions: [
+                "Boucle de jeu stable (60 FPS)",
+                "Mouvements fluides avec gestion d'états (KeyStates)",
+                "Parsing de fichiers .txt pour la génération de maps",
+                "Système de Y-Sorting pour la gestion de la profondeur des sprites",
+                "Collisions AABB (Box-to-Box) entre entités et décor"
+            ],
+            defis: "Interpréter efficacement les données brutes des fichiers texte pour reconstruire une grille de tuiles logique et visuelle.",
             statut: "En développement"
         },
         en: {
-            titre: "2D Game Engine",
+            titre: "2D Top-Down Game Engine",
             equipe: "Solo Developer",
-            description: "Full design of a 2D rendering engine inspired by classic adventure games.",
-            fonctions: ["60 FPS Game Loop", "Tilemapping", "AABB Collisions"],
-            defis: "Optimizing rendering using double buffering.",
+            description: "Java-based 2D engine featuring an external data loading system. The engine dynamically generates the environment from text files, allowing for flexible and structured level design.",
+            fonctions: [
+                "Stable Game Loop (60 FPS)",
+                "Lag-free smooth movement (KeyStates)",
+                "Text file parsing for map generation",
+                "Y-Sorting for dynamic sprite layering",
+                "AABB Collision detection between entities and environment"
+            ],
+            defis: "Efficiently parsing raw data from text files to reconstruct a logical and visual tile grid.",
             statut: "In Development"
         },
-        techs: ["Java", "Swing", "AWT", "POO"],
+        techs: ["Java", "Swing", "AWT", "File I/O", "POO"],
         images: ["Images/Zelda1.PNG", "Images/Zelda2.PNG", "Images/Zelda3.PNG"],
         github: "https://github.com/MaxenceLawniczak/Zelda2DEngine"
     },
     'portfolio': {
         fr: {
-            titre: "Portfolio",
+            titre: "Mon Portfolio",
             equipe: "Développeur Solo",
-            description: "Création d'une identité numérique sobre et efficace.",
-            fonctions: ["Architecture CSS", "Chargement dynamique", "SEO"],
-            defis: "Garantir la lisibilité sur tous les écrans.",
+            description: "Développement d'une interface de présentation minimaliste et structurée pour regrouper mes projets techniques.",
+            fonctions: [
+                "Architecture modulaire en JavaScript",
+                "Chargement dynamique du contenu via des objets JavaScript",
+                "Mise en page optimisée avec CSS Flexbox/Grid",
+                "Code source documenté et structuré"
+            ],
+            defis: "Organiser les données de manière à faciliter l'ajout de nouveaux projets sans modifier la structure HTML.",
             statut: "Terminé"
         },
         en: {
-            titre: "Portfolio",
+            titre: "My Portfolio",
             equipe: "Solo Developer",
-            description: "Creation of a sober and efficient digital identity.",
-            fonctions: ["CSS Architecture", "Dynamic loading", "SEO"],
-            defis: "Ensuring readability across all screens.",
+            description: "Development of a minimalist and structured interface to showcase my technical projects.",
+            fonctions: [
+                "Modular JavaScript architecture",
+                "Dynamic content loading via JavaScript objects",
+                "Optimized layout using CSS Flexbox/Grid",
+                "Documented and structured source code"
+            ],
+            defis: "Organizing data to easily add new projects without altering the HTML structure.",
             statut: "Completed"
         },
         techs: ["HTML5", "CSS3", "JavaScript"],
-        images: ["Images/Portfolio1.png" , "Images/Portfolio2.png"  ],
+        images: ["Images/Portfolio1.png", "Images/Portfolio2.png"],
         github: "https://github.com/MaxenceLawniczak/Portfolio"
     },
     'pacman': {
         fr: {
             titre: "Pacman JavaFX",
-            equipe: "Equipe de 4",
-            description: "Développement d'un jeu Pacman en JavaFX dans le cadre d'un projet universitaire.",
-            fonctions: ["IA des fantômes", "Gestion des collisions", "Système de score"],
-            defis: "Implémenter une IA basique pour les fantômes.",
+            equipe: "Projet Académique (4 personnes)",
+            description: "Réarchitecture et développement d'un Pacman moderne sous JavaFX. Ce projet a servi de cas d'étude pour l'application concrète de patrons de conception logiciels.",
+            fonctions: [
+                "Implémentation de Design Patterns (Observateur, État, Fabrique)",
+                "IA prédictive des fantômes selon leurs personnalités",
+                "Moteur de rendu performant via JavaFX",
+                "Système de progression et gestion d'états (Menu, Jeu, Pause)",
+                "Architecture découplée (Modèle-Vue-Contrôleur)"
+            ],
+            defis: "Appliquer pour la première fois des patrons de conception pour gérer la complexité des comportements des fantômes et des interactions globales.",
             statut: "Terminé"
         },
         en: {
             titre: "JavaFX Pacman",
-            equipe: "Team of 4",
-            description: "Development of a Pacman game in JavaFX as part of a university project.",
-            fonctions: ["Ghost AI", "Collision Management", "Scoring System"],
-            defis: "Implementing basic AI for the ghosts.",
+            equipe: "Academic Project (Team of 4)",
+            description: "Re-architecture and development of a modern Pacman game using JavaFX. This project focused on the concrete application of software design patterns.",
+            fonctions: [
+                "Design Patterns implementation (Observer, State, Factory)",
+                "Predictive Ghost AI based on unique personalities",
+                "High-performance JavaFX rendering engine",
+                "Progression system and state management (Menu, Game, Pause)",
+                "Decoupled architecture (Model-View-Controller)"
+            ],
+            defis: "First-time application of design patterns to manage ghost behaviors and global interactions efficiently.",
             statut: "Completed"
         },
-        techs: ["Java", "JavaFX", "POO"],
+        techs: ["Java", "JavaFX", "Design Patterns", "MVC", "Gitlab CI"],
         images: ["Images/Pacman1.png", "Images/Pacman2.png", "Images/Pacman3.png", "Images/Pacman4.png"],
         github: "https://gitlab.univ-artois.fr/nahel_delille/projet-2025-2026-groupe-a-4"
     }

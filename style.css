@@ -1,7 +1,7 @@
 :root {
     --bg-abysse: #020617;    
     --bg-card: #070e24;      
-    --creme: #f0ebd8;        
+    --creme: rgb(255, 253, 208);        
     --accent: #38bdf8;       
     --border: rgba(240, 235, 216, 0.1);
     --transition: cubic-bezier(0.4, 0, 0.2, 1);
