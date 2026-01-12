@@ -11,22 +11,25 @@
     
     <nav>
         <div class="nav-container">
-            <a href="#accueil" class="logo">ML</a>
+            <a href="#" class="logo">ML</a>
+            <button class="mobile-menu-btn" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-links">
-                <a href="#accueil">Home</a>
-                <a href="#apropos">About</a>
                 <a href="#projets">Projects</a>
-                <a href="#contact">Contact</a>
-                <a href="indexFR.html" class="lang-switch">FR</a>
-            </div>
-
-            <div class="hero-btns">
-                <a href="CV/CV Maxence Lawniczak (EN).pdf" target="_blank" class="btn-secondary">
+                <a href="#competences">Skills</a>
+                <a href="#apropos">About</a>
+                <a href="indexFR.html" class="btn-secondary">FR</a>
+                <div class="hero-btns">
+                <a href="CV/CV Maxence Lawniczak.pdf" target="_blank" class="btn-secondary">
                     <i class="fas fa-eye"></i> View CV
                 </a>
-                <a href="CV/CV Maxence Lawniczak (EN).pdf" download class="btn-secondary">
-                    <i class="fas fa-download"></i> CV
+                <a href="CV\CV Maxence Lawniczak.pdf" download class="btn-secondary">
+                    <i class="fas fa-download"></i> Download CV
                 </a>
+            </div>
             </div>
         </div>
     </nav>
@@ -187,6 +190,24 @@
             <p class="copyright">&copy; 2026 Maxence Lawniczak • Crafted with passion</p>
         </div>
     </footer>
+    <script>
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
 
+        if (menuBtn && navLinks) {
+            menuBtn.addEventListener('click', () => {
+                menuBtn.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Pour fermer le menu automatiquement quand on clique sur un lien
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuBtn.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+    </script>
 </body>
 </html>

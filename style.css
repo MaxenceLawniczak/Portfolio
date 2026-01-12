@@ -650,11 +650,9 @@ footer {
 }
 
 /* --- RESPONSIVE DESIGN --- */
-
-/* Tablettes et petits écrans (max 1024px) */
 @media (max-width: 1024px) {
     .hero-flex {
-        flex-direction: column-reverse; /* Image en haut sur mobile */
+        flex-direction: column-reverse;
         text-align: center;
         gap: 30px;
     }
@@ -668,23 +666,66 @@ footer {
     }
 
     .project-details-grid {
-        grid-template-columns: 1fr; /* La sidebar passe en dessous */
+        grid-template-columns: 1fr;
         gap: 40px;
     }
 
     .side-card {
-        position: static; /* Désactive le sticky sur mobile */
+        position: static;
     }
 }
 
-/* Mobiles (max 768px) */
 @media (max-width: 768px) {
-    .nav-container {
-        height: 60px;
+    .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1100;
     }
 
+    .mobile-menu-btn span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: var(--creme);
+        transition: 0.3s;
+    }
+
+    /* Animation du burger en "X" quand il est ouvert */
+    .mobile-menu-btn.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .mobile-menu-btn.active span:nth-child(2) { opacity: 0; }
+    .mobile-menu-btn.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+    /* Le menu déroulant */
     .nav-links {
-        display: none; /* Cache les liens de nav simples (un menu burger serait idéal ici) */
+        display: flex; /* On le réactive */
+        position: fixed;
+        top: 0;
+        right: -100%; /* Caché à droite par défaut */
+        width: 70%;
+        height: 100vh;
+        background: var(--bg-card);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    }
+
+    /* Quand le menu est ouvert */
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        margin: 20px 0;
+        font-size: 1.2rem;
+    }
+    .nav-container {
+        height: 60px;
     }
 
     .hero h1 {
@@ -707,32 +748,35 @@ footer {
     }
 
     .carousel-container {
-        height: 300px; /* Plus petit sur mobile */
+        height: 300px;
     }
 
     .apropos-container .btn-secondary {
-        margin-left: 0; /* Annule ton margin-left de 40rem */
+        margin-left: 0;
         display: inline-block;
         margin-top: 20px;
     }
 
     .project-grid {
-        grid-template-columns: 1fr; /* Une seule colonne de projet */
+        grid-template-columns: 1fr;
     }
     
     .tech-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 colonnes de compétences max */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Très petits écrans (max 480px) */
+@media (min-width: 769px) {
+    .mobile-menu-btn { display: none; }
+}
+
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 1.8rem;
     }
 
     .hero-btns {
-        flex-direction: column; /* Boutons l'un sur l'autre */
+        flex-direction: column;
         width: 100%;
     }
 
@@ -741,6 +785,6 @@ footer {
     }
     
     .tech-grid {
-        grid-template-columns: 1fr; /* Une seule compétence par ligne */
+        grid-template-columns: 1fr;
     }
 }

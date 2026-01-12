@@ -11,22 +11,25 @@
     
     <nav>
         <div class="nav-container">
-            <a href="#accueil" class="logo">ML</a>
+            <a href="#" class="logo">ML</a>
+            <button class="mobile-menu-btn" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-links">
-                <a href="#accueil">Accueil</a>
-                <a href="#apropos">À propos</a>
                 <a href="#projets">Projets</a>
-                <a href="#contact">Contact</a>
-                <a href="indexEN.html" id="lang-btn" class="lang-switch">EN</a>
-            </div>
-
-            <div class="hero-btns">
+                <a href="#competences">Compétences</a>
+                <a href="#apropos">À propos</a>
+                <a href="indexEN.html" class="btn-secondary">EN</a>
+                <div class="hero-btns">
                 <a href="CV/CV Maxence Lawniczak.pdf" target="_blank" class="btn-secondary">
-                    <i class="fas fa-eye"></i> Voir CV
+                    <i class="fas fa-eye"></i> Voir le CV
                 </a>
                 <a href="CV\CV Maxence Lawniczak.pdf" download class="btn-secondary">
-                    <i class="fas fa-download"></i> CV
+                    <i class="fas fa-download"></i> Télécharger le CV
                 </a>
+            </div>
             </div>
         </div>
     </nav>
@@ -181,6 +184,24 @@
             <p class="copyright">&copy; 2026 Maxence Lawniczak • <span>L'atout qu'il vous manque.</span></p>
         </div>
     </footer>
+    <script>
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
 
+        if (menuBtn && navLinks) {
+            menuBtn.addEventListener('click', () => {
+                menuBtn.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Pour fermer le menu automatiquement quand on clique sur un lien
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuBtn.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+    </script>
 </body>
 </html>
