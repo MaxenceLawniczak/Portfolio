@@ -648,3 +648,99 @@ footer {
         gap: 40px;
     }
 }
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Tablettes et petits écrans (max 1024px) */
+@media (max-width: 1024px) {
+    .hero-flex {
+        flex-direction: column-reverse; /* Image en haut sur mobile */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .project-details-grid {
+        grid-template-columns: 1fr; /* La sidebar passe en dessous */
+        gap: 40px;
+    }
+
+    .side-card {
+        position: static; /* Désactive le sticky sur mobile */
+    }
+}
+
+/* Mobiles (max 768px) */
+@media (max-width: 768px) {
+    .nav-container {
+        height: 60px;
+    }
+
+    .nav-links {
+        display: none; /* Cache les liens de nav simples (un menu burger serait idéal ici) */
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-stats {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .carousel-container {
+        height: 300px; /* Plus petit sur mobile */
+    }
+
+    .apropos-container .btn-secondary {
+        margin-left: 0; /* Annule ton margin-left de 40rem */
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Une seule colonne de projet */
+    }
+    
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes de compétences max */
+    }
+}
+
+/* Très petits écrans (max 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-btns {
+        flex-direction: column; /* Boutons l'un sur l'autre */
+        width: 100%;
+    }
+
+    .btn-primary, .btn-secondary {
+        text-align: center;
+    }
+    
+    .tech-grid {
+        grid-template-columns: 1fr; /* Une seule compétence par ligne */
+    }
+}
