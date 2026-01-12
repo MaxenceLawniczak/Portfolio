@@ -120,6 +120,105 @@ const projets = {
         techs: ["Java", "JavaFX", "Design Patterns", "MVC", "Gitlab CI"],
         images: ["Images/Pacman1.png", "Images/Pacman2.png", "Images/Pacman3.png", "Images/Pacman4.png"],
         github: "https://gitlab.univ-artois.fr/nahel_delille/projet-2025-2026-groupe-a-4"
+    },
+    'motown': {
+        fr: {
+            titre: "Motown Avenue",
+            equipe: "Marathon du Web (8 personnes)",
+            description: "Projet réalisé en 48h en collaboration avec des étudiants de MMI. Création d'une plateforme web immersive dédiée à l'univers de Motown, alliant design créatif et robustesse technique.",
+            fonctions: [
+                "Collaboration étroite entre développeurs (BUT) et designers (MMI)",
+                "Développement rapide sous architecture PHP / Blade",
+                "Intégration de maquettes haute fidélité en responsive design",
+                "Gestion de projet en temps limité (méthode Agile)",
+                "Mise en place d'un système de navigation fluide et dynamique"
+            ],
+            defis: "Allier technique et créativité sous une contrainte de temps stricte (48h) tout en assurant une communication fluide au sein d'une équipe pluridisciplinaire de 8 personnes.",
+            statut: "Terminé"
+        },
+        en: {
+            titre: "Motown Avenue",
+            equipe: "Web Marathon (Team of 8)",
+            description: "A 48-hour project developed in collaboration with MMI design students. We built an immersive web platform dedicated to the Motown universe, merging creative design with technical stability.",
+            fonctions: [
+                "Close collaboration between developers and UI/UX designers",
+                "Rapid development using PHP and the Blade templating engine",
+                "Integration of high-fidelity responsive designs",
+                "Strict time-limited project management (Agile workflow)",
+                "Implementation of smooth and dynamic user navigation"
+            ],
+            defis: "Merging technical constraints with creative vision within a strict 48-hour deadline while maintaining clear communication in a large multidisciplinary team.",
+            statut: "Completed"
+        },
+        techs: ["PHP", "Blade", "HTML", "CSS", "Git"],
+        images: ["Images/Motown1.png", "Images/Motown2.png"],
+        github: "https://github.com/MaxenceLawniczak/MotownAvenue"
+    },
+    'soulMate': {
+        fr: {
+            titre: "Soûl-Mates",
+            equipe: "Projet Académique (4 personnes)",
+            description: "Application web interactive sous forme de quiz sur les cocktails. L'objectif est de retrouver les ingrédients d'un cocktail à partir de son nom et de son visuel.",
+            fonctions: [
+                "Consommation d'une API de cocktails pour générer les questions",
+                "Système de score dynamique et gestion du cycle de vie des questions",
+                "Interface utilisateur réactive avec rendu côté serveur (Jinja2)",
+                "Logique de filtrage et de validation des réponses en Python",
+                "Architecture web structurée avec le micro-framework Flask"
+            ],
+            defis: "Gérer les appels API asynchrones et structurer la base de données des ingrédients pour assurer la fluidité du quiz.",
+            statut: "Terminé"
+        },
+        en: {
+            titre: "Soûl-Mates",
+            equipe: "Academic Project (Team of 4)",
+            description: "An interactive cocktail quiz web application. The goal is to guess the correct ingredients based on the cocktail's name and image.",
+            fonctions: [
+                "API integration to fetch and display dynamic cocktail data",
+                "Dynamic scoring system and question lifecycle management",
+                "Responsive UI using server-side rendering with Jinja2",
+                "Backend validation and filtering logic developed in Python",
+                "Clean web architecture using the Flask micro-framework"
+            ],
+            defis: "Handling API requests and structuring ingredient data to ensure a seamless quiz experience.",
+            statut: "Completed"
+        },
+        techs: ["Python", "Flask", "Jinja2", "API", "Git"],
+        images: ["Images/Soul1.png", "Images/Soul2.png"],
+        github: "https://github.com/MaxenceLawniczak/SoulMates"
+    },
+    'cineHub': {
+        fr: {
+            titre: "CineHub",
+            equipe: "Projet Académique (4 personnes)",
+            description: "Application web dynamique dédiée à la recherche et à la gestion d'un catalogue de films et séries. L'utilisateur peut explorer les œuvres et organiser sa liste de visionnage personnelle.",
+            fonctions: [
+                "Conception et gestion d'une base de données relationnelle (Seeders)",
+                "Système de gestion de listes (Watchlist) avec stockage persistant",
+                "Moteur de recherche interne avec filtres avancés (genres, années)",
+                "Interface utilisateur moderne conçue avec le moteur de template Blade",
+                "Architecture backend robuste développée en PHP"
+            ],
+            defis: "Structurer la base de données pour gérer efficacement les relations entre films, genres et utilisateurs, tout en assurant la rapidité des recherches.",
+            statut: "Terminé"
+        },
+        en: {
+            titre: "CineHub",
+            equipe: "Academic Project (Team of 4)",
+            description: "A dynamic web application for searching and managing a catalog of movies and TV shows. Users can explore content and organize their personal watchlists.",
+            fonctions: [
+                "Relational database design and management using Seeders",
+                "Watchlist management system with persistent storage",
+                "Internal search engine featuring advanced filters (genres, dates)",
+                "Modern UI components built with the Blade templating engine",
+                "Robust backend architecture developed using PHP"
+            ],
+            defis: "Structuring the database to efficiently manage relationships between movies, genres, and users while ensuring fast search performance.",
+            statut: "Completed"
+        },
+        techs: ["PHP", "Blade", "HTML", "CSS", "Git"],
+        images: ["Images/CineHub3.png", "Images/CineHub2.png", "Images/CineHub1.png"],
+        github: "https://github.com/MaxenceLawniczak/CineHub"
     }
 };
 const params = new URLSearchParams(window.location.search);
