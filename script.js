@@ -85,7 +85,7 @@ const projets = {
             statut: "Completed"
         },
         techs: ["HTML5", "CSS3", "JavaScript"],
-        images: ["Images/Portfolio1.png", "Images/Portfolio2.png"],
+        images: ["Images/Portfolio1.png", "Images/Portfolio2.png", "Images/Portfolio3.png"],
         github: "https://github.com/MaxenceLawniczak/Portfolio"
     },
     'pacman': {
