@@ -1,10 +1,10 @@
 :root {
     --bg-abysse: #020617;    
-    --bg-hero: #050b1f;      
-    --bg-card: #0f172a;      
+    --bg-card: #070e24;      
     --creme: #f0ebd8;        
-    --creme-muted: rgba(240, 235, 216, 0.6);
     --accent: #38bdf8;       
+    --border: rgba(240, 235, 216, 0.1);
+    --transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -65,26 +65,11 @@ nav {
     justify-content: center;
 }
 
-.profile-pic {
-    background-color: #2d3748;
-    width: 280px;
-    height: 280px;
-    border-radius: 20px;
-    object-fit: cover;
-    
-    border: 2px solid var(--text);
-    padding: 5px;
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.1); 
-    
-    border-color: #38bdf8;
-    transition: all 0.3s ease;
-}
-
 .hero {
-    min-height: 80vh;
     display: flex;
     align-items: center;
     padding-top: 80px;
+    background: var(--bg-hero);
 }
 
 .hero-flex {
@@ -157,10 +142,14 @@ nav {
 .btn-primary:hover { transform: translateY(-3px); opacity: 0.9; }
 .btn-secondary:hover { background: rgba(240, 235, 216, 0.05); }
 
-.container {
+.container, .apropos-container{
     max-width: 1100px;
     margin: 0 auto;
     padding: 100px 20px;
+}
+
+.apropos-container .btn-secondary {
+    margin-left: 40rem;
 }
 
 .section-header {
@@ -257,6 +246,10 @@ footer {
 
 .copyright { opacity: 0.3; font-size: 0.8rem; margin-top: 60px; }
 
+.copyright span {
+    color: var(--accent);
+    font-weight: bold;
+}
 /* --- PAGE PROJET --- */
 .project-page .container {
     padding-top: 120px;
@@ -480,8 +473,29 @@ footer {
 
 /* --- FACE AVANT --- */
 .card-front {
-    background: var(--bg-card);
+    background: transparent blur(10px); /* Effet de verre dépoli */
     z-index: 2; /* Devant par défaut */
+}
+
+/* Conteneur de l'image de fond */
+.background_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place l'image derrière le texte et l'icône */
+    overflow: hidden; /* Empêche le flou de dépasser des bords de la carte */
+    border-radius: 12px;
+}
+
+.background_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* L'image remplit toute la carte sans se déformer */
+    filter: blur(4px) brightness(0.4); /* Le flou + assombrissement pour la lisibilité */
+    transform: scale(1.1); /* On zoome un peu pour éviter les bords blancs du flou */
+    transition: transform 0.6s ease;
 }
 
 .card-front i {
@@ -524,4 +538,113 @@ footer {
 .btn-secondary i {
     margin-right: 8px;
     font-size: 0.9rem;
+}
+
+/* --- SECTION À PROPOS (STYLE BLUEPRINT) --- */
+
+.section-header h2 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.section-number {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.big-text {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: var(--creme);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.highlight {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+}
+
+.about-bio p {
+    color: var(--creme-muted);
+    margin-bottom: 20px;
+}
+
+/* Statistiques style technique */
+.about-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--accent);
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.6;
+}
+
+/* Colonne de droite : Boîtes de valeurs */
+.about-values {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.value-box {
+    padding: 25px;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.value-box h4 {
+    color: var(--accent);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.value-box p {
+    font-size: 0.9rem;
+    color: var(--creme-muted);
+}
+
+.value-box:hover {
+    border-color: var(--accent);
+    background: rgba(56, 189, 248, 0.02);
+    transform: translateX(10px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }
