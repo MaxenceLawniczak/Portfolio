@@ -788,3 +788,60 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Couleurs par défaut (si rien n'est détecté) */
+:root {
+    --accent-color: #3b82f6; /* Bleu */
+}
+
+/* Thème JAVA (Rouge/Orange) */
+body.theme-java {
+    --accent-color: #f89820;
+}
+
+/* Thème Python (Jaune/Bleu) */
+body.theme-python {
+    --accent-color: #3776ab;
+}
+
+/* Thème PHP (Violet) */
+body.theme-php {
+    --accent-color: #777bb3;
+}
+
+/* On s'assure que les icônes de section prennent la couleur */
+.details-main h3 i {
+    color: var(--accent-color);
+}
+
+/* Le badge de statut peut aussi suivre le thème s'il n'est pas terminé */
+.status-badge {
+    background-color: var(--accent-color);
+}
+
+body.theme-java .status-badge { background: #f89820; color: white; }
+body.theme-java h3 i { color: #f89820; }
+
+/* Thème HTML/CSS (Bleu/Cyan) */
+body.theme-html {
+    --accent-color: #e34c26;
+}
+
+/* Thème RÉSEAU/SYSTEME (Vert/Cyber) */
+body.theme-network {
+    --accent-color: #10b981;
+}
+
+/* Application de la couleur d'accent aux éléments */
+.btn-primary {
+    background-color: var(--accent-color) !important;
+    border: none;
+}
+
+.tech-list span {
+    border-bottom: 2px solid var(--accent-color);
+}
+
+h3 {
+    color: var(--accent-color);
+}

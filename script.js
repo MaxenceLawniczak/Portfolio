@@ -230,6 +230,10 @@ function renderProjet(lang) {
     const pBase = projets[projetId];
     if (!pBase) { window.location.href = 'index.html'; return; }
     
+    if (pBase.techs && pBase.techs.length > 0) {
+        appliquerTheme(pBase.techs[0]);
+    }
+
     const p = pBase[lang];
     const ui = uiTranslations[lang];
 
@@ -311,3 +315,23 @@ document.getElementById('btn-lang').addEventListener('click', function() {
     this.innerText = currentLang === 'fr' ? 'EN' : 'FR';
     renderProjet(currentLang);
 });
+
+// Imaginons que 'projet' est l'objet contenant les infos
+function appliquerTheme(technoPrincipale) {
+    const body = document.body;
+    body.classList.remove('theme-java', 'theme-html', 'theme-network', 'theme-python', 'theme-php');
+
+    const tech = technoPrincipale.toLowerCase();
+    
+    if (tech.includes('java')) {
+        body.classList.add('theme-java');
+    } else if (tech.includes('html') || tech.includes('javascript') || tech.includes('css')) {
+        body.classList.add('theme-html');
+    } else if (tech.includes('python') || tech.includes('flask')) {
+        body.classList.add('theme-python'); // Nouveau pour Soul-Mates
+    } else if (tech.includes('php')) {
+        body.classList.add('theme-php'); // Nouveau pour CineHub/Motown
+    } else if (tech.includes('nftables') || tech.includes('dns') || tech.includes('réseau')) {
+        body.classList.add('theme-network');
+    }
+}
