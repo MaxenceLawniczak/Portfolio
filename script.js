@@ -230,7 +230,7 @@ const projets = {
                 "Gestion multi-projets avec isolation des tâches",
                 "Interface Responsive Design optimisée pour mobile (Mobile-First)",
                 "Système d'onglets dynamiques et persistance de session (LocalStorage)",
-                "Architecture modulaire en JavaScript ES6+"
+                "Architecture en JavaScript"
             ],
             defis: "Assurer la cohérence des données entre les clients lors de modifications simultanées et optimiser l'interface pour une navigation fluide sur smartphone.",
             statut: "Terminé"
@@ -244,13 +244,13 @@ const projets = {
                 "Multi-project management with task isolation",
                 "Responsive Design optimized for mobile (Mobile-First)",
                 "Dynamic tab system and session persistence (LocalStorage)",
-                "Modular JavaScript ES6+ architecture"
+                "Modular JavaScript architecture"
             ],
             defis: "Ensuring data consistency between clients during simultaneous updates and optimizing the UI for a seamless smartphone experience.",
             statut: "Completed"
         },
-        techs: ["Firebase", "JavaScript", "HTML5", "CSS3", "NoSQL"],
-        images: ["Images/Portfolio2.png"],
+        techs: ["JavaScript", "Firebase", "HTML5", "CSS3", "NoSQL"],
+        images: ["Images/ToDoList1.png", "Images/ToDoList2.png"],
         github: "https://github.com/MaxenceLawniczak/ToDoList"
     },
 };
