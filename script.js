@@ -219,7 +219,40 @@ const projets = {
         techs: ["PHP", "Blade", "HTML", "CSS", "Git"],
         images: ["Images/CineHub3.png", "Images/CineHub2.png", "Images/CineHub1.png"],
         github: "https://github.com/MaxenceLawniczak/CineHub"
-    }
+    },
+    'todolist': {
+        fr: {
+            titre: "ToDoList Cloud (Temps Réel)",
+            equipe: "Développeur Solo",
+            description: "Développement d'une application de gestion de tâches (Kanban) permettant une collaboration en temps réel. L'application utilise une architecture Backend-as-a-Service pour synchroniser les données instantanément entre plusieurs appareils.",
+            fonctions: [
+                "Synchronisation en temps réel avec Firebase Realtime Database",
+                "Gestion multi-projets avec isolation des tâches",
+                "Interface Responsive Design optimisée pour mobile (Mobile-First)",
+                "Système d'onglets dynamiques et persistance de session (LocalStorage)",
+                "Architecture modulaire en JavaScript ES6+"
+            ],
+            defis: "Assurer la cohérence des données entre les clients lors de modifications simultanées et optimiser l'interface pour une navigation fluide sur smartphone.",
+            statut: "Terminé"
+        },
+        en: {
+            titre: "Cloud ToDoList (Real-Time)",
+            equipe: "Solo Developer",
+            description: "A task management application (Kanban) featuring real-time collaboration. The app uses a Backend-as-a-Service architecture to instantly synchronize data across multiple devices.",
+            fonctions: [
+                "Real-time synchronization with Firebase Realtime Database",
+                "Multi-project management with task isolation",
+                "Responsive Design optimized for mobile (Mobile-First)",
+                "Dynamic tab system and session persistence (LocalStorage)",
+                "Modular JavaScript ES6+ architecture"
+            ],
+            defis: "Ensuring data consistency between clients during simultaneous updates and optimizing the UI for a seamless smartphone experience.",
+            statut: "Completed"
+        },
+        techs: ["Firebase", "JavaScript", "HTML5", "CSS3", "NoSQL"],
+        images: ["Images/Portfolio2.png"],
+        github: "https://github.com/MaxenceLawniczak/ToDoList"
+    },
 };
 const params = new URLSearchParams(window.location.search);
 const projetId = params.get('id');
